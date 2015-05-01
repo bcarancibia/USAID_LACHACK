@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyUI(fluidPage(\n\n  # Application title\n  titlePanel(\"Old Faithful Geyser Data\"),\n\n  # Sidebar with a slider input for number of bins\n  sidebarLayout(\n    sidebarPanel(\n      checkboxGroupInput(\"Variables\", \n                         label = h3(\"Variables\"), \n                         choices = list(\"Population Density\" = 1, \n                                        \"Poverty\" = 2, \n                                        \"Purchasing Power\" = 3,\n                                        \"Secondary Enrollment Rate\" = 4,\n                                        \"Urban Growth Rate\" = 5,\n                                        \"GDP\" = 6,\n                                        \"Mobile Subscriptions\" = 7,\n                                        \"Internet Users\" = 8,\n                                        \"Aid Funding\" = 9,\n                                        \"Homicide Rate\" = 10,\n                                        \"Fragility Index\" = 11,\n                                        \"Effectiveness Index\" = 12,\n                                        \"Legitimacy Index\" = 13,\n                                        \"US Deportation\" = 14,\n                                        \"US Criminal Deportation\" = 15,\n                                        \"Net Migration\" = 16),\n                           \n                                        \n                         selected = c(2,4,10,12,16))\n    ),\n\n    # Show a plot of the generated distribution\n    mainPanel(\n      plotOutput(\"distPlot\")\n    )\n  )\n))\n",
+    "created" : 1430488460278.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "389198975",
+    "id" : "DAC56615",
+    "lastKnownWriteTime" : 1430490382,
+    "path" : "~/R Shiny Workspace/hackathon/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

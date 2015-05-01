@@ -1,0 +1,16 @@
+{
+    "contents" : "library(corrplot)\n\n##Pre-cleaning, interopolated NAs by averaging values on either side...if a value was the first point averaged the two\n#following points\n##Removed specific legitimacy and effectiveness indicators because there was not variation\n\n#Read in data\nrawData<-na.omit(read.table(\"HondoTransp.csv\", header=TRUE, sep=\",\"))\nrawData<-rawData[1:9,1:17]\n#calculate correlations\nx<-cor(rawData)\n#plot correlations\ncorrplot(x, method = \"ellipse\")\n#correlation plot matrix\nplot(rawData)\n\n#linear regression\n#me screwing-around with some linear models\n#model<-lm(rawData$Homicides ~ ., data=rawData)\n#model2<-lm(Homicides ~ CrimRemovals + Poverty + PPP + GDP, data = rawData)",
+    "created" : 1430488528607.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "21190044",
+    "id" : "C1CA426F",
+    "lastKnownWriteTime" : 1430488792,
+    "path" : "~/R Shiny Workspace/hackathon/Immigration.r",
+    "project_path" : "Immigration.r",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

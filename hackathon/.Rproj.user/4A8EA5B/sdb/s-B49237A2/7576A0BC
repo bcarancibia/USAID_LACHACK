@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the server logic for a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\nlibrary(corrplot)\n\nshinyServer(function(input, output) {\n\n  output$distPlot <- renderPlot({\n    # generate bins based on input$bins from ui.R\n    #Read in data\n    rawData<-read.table(\"HondoTransp.csv\", header=TRUE, sep=\",\")\n    rawData<-rawData[1:9,as.numeric(input$Variables)+1]\n    #calculate correlations\n    x<-cor(rawData)\n    #plot correlations\n    corrplot(x, method = \"ellipse\")\n    #correlation plot matrix\n    #plot(rawData)\n    # draw the histogram with the specified number of bins\n\n  })\n\n})\n",
+    "created" : 1430488460499.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1597383443",
+    "id" : "7576A0BC",
+    "lastKnownWriteTime" : 1430490137,
+    "path" : "~/R Shiny Workspace/hackathon/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
